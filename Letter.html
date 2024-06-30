@@ -204,13 +204,26 @@
 	  width: 0;
 	}
 
-
+	.button 
+	{
+	  background-color: #04AA6D; /* Green */
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	}
+	
+	p {
+	  display: inline;
+	  font-size: 1.3em;
+	}
 	</style>
 </head>
 <body>
-<ui:include src="letter1.xhtml" />
- <link>
-
+<link>
  <a href="letter1.html"><div class="wing right"></div>
     <div class="wing left"></div>
      <div class="heart"></div>
@@ -219,5 +232,20 @@
 		<div class="sides"></div>
 	</div>
 	</a>
+</link>
+<center><p>Click the button to start the music:</p>
+    <button onclick="playAudio()" class="button">Play Music</button>
+    
+    <audio id="myAudio" loop>
+        <source src="C:\Users\sanja\OneDrive\Desktop\Ed Sheeran - Perfect [MP3 Free Download].mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+ <script>
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+    </script>	
+	
 </body>
 </html>
